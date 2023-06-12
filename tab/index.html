@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>T-Access - Exemplo de Código</title>
+    <link
+      rel="stylesheet"
+      href="https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="br-tab" id="tab-navigation-container">
+      <nav class="tab-nav">
+        <ul>
+          <li class="tab-item">
+            <button
+              type="button"
+              data-panel="panel-1-icon"
+              role="tab"
+              aria-controls="tab-navigation-container"
+              aria-selected="false"
+            >
+              <span class="name"
+                ><span class="d-flex flex-column flex-sm-row"
+                  ><span class="icon mb-1 mb-sm-0 mr-sm-1"
+                    ><i class="fas fa-image" aria-hidden="true"></i></span
+                  ><span class="name">ITEM</span></span
+                ></span
+              >
+            </button>
+          </li>
+          <li class="tab-item">
+            <button
+              type="button"
+              data-panel="panel-2-icon"
+              role="tab"
+              aria-controls="tab-navigation-container"
+              aria-selected="false"
+            >
+              <span class="name"
+                ><span class="d-flex flex-column flex-sm-row"
+                  ><span class="icon mb-1 mb-sm-0 mr-sm-1"
+                    ><i class="fas fa-image" aria-hidden="true"></i></span
+                  ><span class="name">TODOS</span></span
+                ></span
+              >
+            </button>
+          </li>
+          <li class="tab-item active">
+            <button
+              type="button"
+              data-panel="panel-3-icon"
+              role="tab"
+              aria-controls="tab-navigation-container"
+              aria-selected="true"
+            >
+              <span class="name"
+                ><span class="d-flex flex-column flex-sm-row"
+                  ><span class="icon mb-1 mb-sm-0 mr-sm-1"
+                    ><i class="fas fa-image" aria-hidden="true"></i></span
+                  ><span class="name">Notícias</span></span
+                ></span
+              >
+            </button>
+          </li>
+          <li class="tab-item">
+            <button
+              type="button"
+              data-panel="panel-4-icon"
+              role="tab"
+              aria-controls="tab-navigation-container"
+              aria-selected="false"
+            >
+              <span class="name"
+                ><span class="d-flex flex-column flex-sm-row"
+                  ><span class="icon mb-1 mb-sm-0 mr-sm-1"
+                    ><i class="fas fa-image" aria-hidden="true"></i></span
+                  ><span class="name">Serviços</span></span
+                ></span
+              >
+            </button>
+          </li>
+          <li class="tab-item">
+            <button
+              type="button"
+              data-panel="panel-5-icon"
+              role="tab"
+              aria-controls="tab-navigation-container"
+              aria-selected="false"
+            >
+              <span class="name"
+                ><span class="d-flex flex-column flex-sm-row"
+                  ><span class="icon mb-1 mb-sm-0 mr-sm-1"
+                    ><i class="fas fa-image" aria-hidden="true"></i></span
+                  ><span class="name">APLICATIVOS</span></span
+                ></span
+              >
+            </button>
+          </li>
+          <li class="tab-item">
+            <button
+              type="button"
+              data-panel="panel-6-icon"
+              role="tab"
+              aria-controls="tab-navigation-container"
+              aria-selected="false"
+            >
+              <span class="name"
+                ><span class="d-flex flex-column flex-sm-row"
+                  ><span class="icon mb-1 mb-sm-0 mr-sm-1"
+                    ><i class="fas fa-image fa-1x" aria-hidden="true"></i></span
+                  ><span class="name">Mídias</span></span
+                ></span
+              >
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="tab-content">
+        <div class="tab-panel" id="panel-1-icon">
+          <p>Painel Sobre</p>
+        </div>
+        <div class="tab-panel" id="panel-2-icon">
+          <p>Painel Todos</p>
+        </div>
+        <div class="tab-panel active" id="panel-3-icon">
+          <p>Painel Noticias</p>
+        </div>
+        <div class="tab-panel" id="panel-4-icon">
+          <p>Painel Serviços</p>
+        </div>
+        <div class="tab-panel" id="panel-5-icon">
+          <p>Painel Aplicativos</p>
+        </div>
+        <div class="tab-panel" id="panel-6-icon">
+          <p>Painel Mídias</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core-init.js"></script>
+    <script>
+      const tabContainer = document.querySelector(".br-tab");
+      tabContainer.addEventListener("click", (event) => {
+        tabContainer
+          .querySelector('[aria-selected="true"]')
+          .setAttribute("aria-selected", "false");
+        event.target.setAttribute("aria-selected", "true");
+      });
+    </script>
+  </body>
+</html>

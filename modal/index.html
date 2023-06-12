@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>T-Access - Exemplo de Código</title>
+    <link
+      rel="stylesheet"
+      href="https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="br-scrim-util foco" id="scrimutilexample" data-scrim="true">
+      <div class="br-modal">
+        <div class="br-modal-header">Modal com scrim</div>
+        <div class="br-modal-body">
+          <p>Exemplo utilizando o componente scrim com FOCO</p>
+        </div>
+        <div class="br-modal-footer justify-content-center">
+          <button
+            class="br-button secondary"
+            type="button"
+            id="scrimfechar"
+            data-dismiss="scrimexample"
+          >
+            Cancelar
+          </button>
+          <button class="br-button primary mt-3 mt-sm-0 ml-sm-3" type="button">
+            Retornar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="scrimutilexemplo">
+      <button class="br-button primary" type="button" id="modal-open-button">
+        Abrir modal
+      </button>
+    </div>
+    <script src="https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core-init.js"></script>
+    <script>
+      document
+        .querySelector("#modal-open-button")
+        .addEventListener("click", (event) => {
+          const modal = document.querySelector(".br-modal");
+          modal.setAttribute("tabindex", "0");
+          modal.focus();
+        });
+    </script>
+  </body>
+</html>

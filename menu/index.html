@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>T-Access - Exemplo de Código</title>
+    <link
+      rel="stylesheet"
+      href="https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="br-menu contextual active" role="menu">
+      <div class="menu-trigger">
+        <button
+          class="br-button primary block py-4"
+          type="button"
+          data-toggle="contextual"
+          aria-expanded="true"
+        >
+          <span class="mr-1">Contextual</span
+          ><i class="fas fa-chevron-up ml-5" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="menu-container">
+        <div class="menu-panel">
+          <nav class="menu-body">
+            <div class="menu-folder">
+              <ul>
+                <li>
+                  <a class="menu-item" href="javascript: void(0)"
+                    ><span class="content">Item do menu 1</span></a
+                  >
+                </li>
+                <li>
+                  <a class="menu-item" href="javascript: void(0)"
+                    ><span class="content">Item do menu 1</span></a
+                  >
+                </li>
+                <li>
+                  <a class="menu-item" href="javascript: void(0)"
+                    ><span class="content">Item do menu 1</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
+      </div>
+    </div>
+    <script src="https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core-init.js"></script>
+    <script>
+      document
+        .querySelector(".menu-trigger")
+        .children[0].addEventListener("click", (event) => {
+          ariaExpandedValue = !(
+            event.currentTarget.getAttribute("aria-expanded") === "true"
+          );
+          event.currentTarget.setAttribute("aria-expanded", ariaExpandedValue);
+        });
+    </script>
+  </body>
+</html>
